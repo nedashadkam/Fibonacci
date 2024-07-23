@@ -1,0 +1,32 @@
+div {
+    background-color: #f5f3f3;
+    border: 1px solid darkblue;
+    width: 26%;
+    padding: 2%;
+    margin-left: 35%;
+    margin-top: 20vh;
+    border-radius: 5px;
+}
+
+input {
+    padding: 4px;
+    margin-left: 10px;
+    background-color: #b4d7b4;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    width: 20%;
+    text-align: center;
+}
+
+span {
+    color: darkblue;
+    word-wrap: break-word;
+}
+
+input:focus {
+    outline: 1px solid darkgray;
+}
+
+input:hover {
+    box-shadow: 0px 0px 1px 1px #b4d7b4;
+}

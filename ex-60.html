@@ -1,0 +1,67 @@
+<!-- یک برنامه جاوا اسکریپت بنویسید تا اولین n عدد فیبوناچی را بدست آورید. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="ex-60.css">
+
+</head>
+
+<body>
+
+    <div>
+
+        <p>Enter two numbers to form a Fiboonacci sequence.</p>
+
+        <p>
+            <label for="num1">Number 1 </label>
+            <input id="num1" type="text">
+        </p>
+
+        <p>
+            <label for="num2">Number 2</label>
+            <input id="num2" type="text">
+        </p>
+
+        <p onclick="call()">Get the Fibonacci sequence</p>
+
+        <p id="demo"></p>
+
+    </div>
+
+
+    <script>
+
+        let num1, num2, sum;
+
+        function call() {
+            num1 = document.getElementById("num1").value;
+            num2 = document.getElementById("num2").value;
+            sum = [+num1, +num2];
+            document.getElementById("demo").innerHTML = `The Fibonacci sequence is :<span> ${fibonacci()} ... </span>`;
+        }
+
+
+
+        function fibonacci() {
+        
+            let x1 = sum[sum.length - 2];
+            let x2 = sum[sum.length - 1];
+            let a = x1 + x2;
+            sum.push(a);
+
+            if (sum.length < 10) {
+                fibonacci();
+            }
+
+            return sum;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
